@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #F7F7FF;
   border: 1px solid black;
   color: black;

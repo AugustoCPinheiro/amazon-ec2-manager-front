@@ -9,6 +9,6 @@ export const HeaderContainer = styled.header`
   margin-bottom: 20px;
   color: white;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 40px;
   font-size: 18px;
 `;

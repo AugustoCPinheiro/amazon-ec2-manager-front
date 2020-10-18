@@ -7,8 +7,14 @@ const useListInstances = () => {
 
     return result;
   });
-  console.log(data?.Reservations)
-  return { instancesLoading: loading, instances: data?.Reservations.map((reservation) => reservation.Instances[0]), instanceError: error };
+
+  return {
+    instancesLoading: loading,
+    instances: data?.Reservations.map(
+      (reservation) => reservation.Instances[0]
+    ),
+    instanceError: error,
+  };
 };
 
 export default useListInstances;
