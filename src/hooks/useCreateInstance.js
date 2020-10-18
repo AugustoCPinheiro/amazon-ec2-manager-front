@@ -1,13 +1,17 @@
-import { useMutation } from 'react-query';
+import { useMutation, useQueryCache } from 'react-query';
 import axios from 'axios';
 
-const useCreateInstance = (onSuccess) => {
+const useCreateInstance = () => {
+  const cache = useQueryCache();
+
   const [mutate] = useMutation(
     () => {
       axios.post('http://localhost:8080/instance');
     },
     {
-      onSuccess,
+      onSuccess: () => {
+        cache.invalidateQueries('instances');
+      },
     }
   );
 
