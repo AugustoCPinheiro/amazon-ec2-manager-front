@@ -1,5 +1,5 @@
 import React from 'react';
-import DataItem from '../DataItem/DataItem.component';
+import DataItem from '../DataItem';
 import { Item } from './InstanceListItem.style';
 
 const InstanceListItem = ({ Tags=[], InstanceType, State }) => (

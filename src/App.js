@@ -1,5 +1,4 @@
 import React from 'react';
-import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 import './App.css';
 import Header from './components/Header';
 import InstancePage from './pages/InstancesPage.page';
