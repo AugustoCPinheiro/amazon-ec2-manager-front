@@ -1,9 +1,9 @@
 import React from 'react';
 
-const DataItem = ({ label, value }) => (
+const DataItem = ({ label, value, className }) => (
   <>
     {value && (
-      <div>
+      <div className={className}>
         <strong>{`${label}:`}</strong>
         <span>{value}</span>
       </div>
