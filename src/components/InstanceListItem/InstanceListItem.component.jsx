@@ -4,13 +4,17 @@ import IconButton from '../IconButton';
 import { ActionWrapper, InfoWrapper, InstanceDataItem, Item } from './InstanceListItem.style';
 import { ReactComponent as StopIcon } from '../../icons/botao-de-energia.svg';
 import { ReactComponent as StartIcon } from '../../icons/poder.svg';
+import { ReactComponent as SkullIcon } from '../../icons/cranio.svg'
+import useTerminateInstance from '../../hooks/useTerminateInstance';
 
 const InstanceListItem = ({ Tags=[], InstanceType, State, InstanceId }) => {
   const { updateInstance } = useUpdateInstance();
+  const { terminateInstance } = useTerminateInstance();
 
   const onUpdateInstance = (action) => () => {
-    updateInstance({ ids: [InstanceId], action })
-  }
+    updateInstance({ ids: [InstanceId], action });
+  };
+
   const renderButton = (statusCode) => {
     switch (statusCode) {
       case 80:
@@ -42,7 +46,16 @@ const InstanceListItem = ({ Tags=[], InstanceType, State, InstanceId }) => {
         />
         <InstanceDataItem label="Status" value={State.Name} />
       </InfoWrapper>
-      <ActionWrapper>{renderButton(State.Code)}</ActionWrapper>
+      <ActionWrapper>
+        {renderButton(State.Code)}
+        <IconButton
+          onClick={() => {
+            terminateInstance({ id: InstanceId });
+          }}
+        >
+          <SkullIcon width="20px" height="20px" />
+        </IconButton>
+      </ActionWrapper>
     </Item>
   );
 };

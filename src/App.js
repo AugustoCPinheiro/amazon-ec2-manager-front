@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 import Header from './components/Header';
 import InstancePage from './pages/InstancesPage.page';
+import Modal from './components/Modal';
 
 const queryCache = new QueryCache();
 const GlobalStyles = createGlobalStyle`
@@ -42,6 +43,7 @@ function App() {
       <ReactQueryCacheProvider queryCache={queryCache}>
         <GlobalStyles />
         <Header />
+        {/* <Modal /> */}
         <InstancePage />
       </ReactQueryCacheProvider>
     </div>

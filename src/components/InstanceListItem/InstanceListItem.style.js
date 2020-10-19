@@ -25,6 +25,9 @@ export const ActionWrapper = styled.div`
   flex-basis: 20%;
   display: flex;
   justify-content: flex-end;
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
 `;
 export const InstanceDataItem = styled(DataItem)`
   /* margin-bottom: 10px; */
