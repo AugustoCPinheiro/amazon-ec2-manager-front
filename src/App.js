@@ -1,9 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { QueryCache, ReactQueryCacheProvider } from 'react-query';
-import Header from './components/Header';
-import InstancePage from './pages/InstancesPage.page';
-import Modal from './components/Modal';
+import Routes from './Routes/Routes.component';
 
 const queryCache = new QueryCache();
 const GlobalStyles = createGlobalStyle`
@@ -42,9 +40,8 @@ function App() {
     <div className="App">
       <ReactQueryCacheProvider queryCache={queryCache}>
         <GlobalStyles />
-        <Header />
         {/* <Modal /> */}
-        <InstancePage />
+        <Routes />
       </ReactQueryCacheProvider>
     </div>
   );

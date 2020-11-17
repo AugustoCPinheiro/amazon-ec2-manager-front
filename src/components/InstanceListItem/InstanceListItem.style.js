@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import DataItem from '../DataItem';
 
 export const Item = styled.li`

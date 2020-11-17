@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const HeaderContainer = styled.header`
   position: relative;
@@ -10,6 +10,5 @@ export const HeaderContainer = styled.header`
   margin-bottom: 20px;
   color: white;
   align-items: center;
-  padding-left: 40px;
   font-size: 18px;
 `;
