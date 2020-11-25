@@ -4,7 +4,7 @@ const DataItem = ({ label, value, className }) => (
   <>
     {value && (
       <div className={className}>
-        <strong>{`${label}:`}</strong>
+        <strong>{`${label}: `}</strong>
         <span>{value}</span>
       </div>
     )}

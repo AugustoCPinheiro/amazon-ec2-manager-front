@@ -1,7 +1,7 @@
 import React from 'react';
 import InstanceList from '../components/InstanceList';
 import PageContainer from '../components/PageContainer/PageContainer.component';
-import useListInstances from '../hooks/useListInstances';
+import useListInstances from '../hooks/ec2/useListInstances';
 
 const InstancePage = () => {
   const { instances = [] } = useListInstances();

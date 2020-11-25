@@ -1,5 +1,5 @@
 import React from 'react';
-import useCreateInstance from '../../hooks/useCreateInstance';
+import useCreateInstance from '../../hooks/ec2/useCreateInstance';
 import Button from '../Button';
 import InstanceListItem from '../InstanceListItem';
 import { List, ListHeader, ListWrapper } from './InstanceList.style';

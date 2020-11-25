@@ -1,11 +1,11 @@
 import React from 'react';
-import useUpdateInstance from '../../hooks/useUpdateInstance';
+import useUpdateInstance from '../../hooks/ec2/useUpdateInstance';
 import IconButton from '../IconButton';
 import { ActionWrapper, InfoWrapper, InstanceDataItem, Item } from './InstanceListItem.style';
 import { ReactComponent as StopIcon } from '../../icons/botao-de-energia.svg';
 import { ReactComponent as StartIcon } from '../../icons/poder.svg';
 import { ReactComponent as SkullIcon } from '../../icons/cranio.svg'
-import useTerminateInstance from '../../hooks/useTerminateInstance';
+import useTerminateInstance from '../../hooks/ec2/useTerminateInstance';
 
 const InstanceListItem = ({ Tags=[], InstanceType, State, InstanceId }) => {
   const { updateInstance } = useUpdateInstance();

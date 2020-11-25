@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
 import InstancePage from '../pages/InstancesPage.page';
+import BucketsPage from '../pages/BucketsPage.page';
+import BucketObjects from '../pages/BucketObjectsPage.page'
 
 const Routes = () => (
   <Router>
@@ -11,7 +13,10 @@ const Routes = () => (
         <InstancePage />
       </Route>
       <Route path="/s3">
-        <div>s3</div>
+        <BucketsPage />
+      </Route>
+      <Route path="/bucket">
+        <BucketObjects />
       </Route>
     </Switch>
   </Router>
